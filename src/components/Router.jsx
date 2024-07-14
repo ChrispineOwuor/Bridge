@@ -82,7 +82,7 @@ const router = createBrowserRouter([
       },
 
       {
-        path: "/app/alerts",
+        path: "/app/add/symptom",
         element: <Alerts />,
       },
       {

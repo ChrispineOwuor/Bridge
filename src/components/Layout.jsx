@@ -29,9 +29,9 @@ export default function Layout() {
       roles: ["admin"],
     },
     {
-      link: "/app/alerts",
+      link: "/app/add/symptom",
       name: "Alerts",
-      roles: ["doctor", "admin", "patient"],
+      roles: ["doctor",],
     },
     {
       link: "/app/educational-content",
