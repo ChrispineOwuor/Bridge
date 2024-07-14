@@ -7,7 +7,7 @@ import { AuthContext } from "../../Contexts/AuthContext";
 export default function AdminDashboard() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
-  const {token } = useContext(AuthContext)// Replace this with the actual token
+  const {token } = useContext(AuthContext)
 
   useEffect(() => {
     const fetchData = async () => {

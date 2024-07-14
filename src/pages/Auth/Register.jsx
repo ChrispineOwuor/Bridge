@@ -7,7 +7,6 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [name, setFullname] = useState("");
 
-
   const [passwordConfirmation, setPasswordConfirmation] = useState("");
   const [buttonText, setButtonText] = useState("Sign up");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -158,6 +157,24 @@ export default function Register() {
               className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
             >
               Sign In
+            </Link>
+          </p>
+          <p className="mt-10 text-center text-sm text-gray-500">
+            Create Doctor Account With Us{" "}
+            <Link
+              to={"/auth/register/doctor"}
+              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            >
+              Sign Up
+            </Link>
+          </p>
+          <p className="mt-10 text-center text-sm text-gray-500">
+            Only For Admin Registation
+            <Link
+              to={"/auth/register/admin"}
+              className="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+            >
+              Sign Up
             </Link>
           </p>
           <p className="mt-10 text-center text-sm text-gray-500">

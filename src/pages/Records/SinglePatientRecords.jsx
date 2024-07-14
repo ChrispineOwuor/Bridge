@@ -30,7 +30,7 @@ export default function SinglePatientRecords() {
 
     fetchData();
   }, [token]);
-  console.log(records);
+
   return (
     <>
       <div className="top">
@@ -40,6 +40,7 @@ export default function SinglePatientRecords() {
           </h1>
         </div>
       </div>
+      {records && records.length === 0 && <div>You have no health records</div>}
       <ul>
         {records &&
           records.map((record) => {

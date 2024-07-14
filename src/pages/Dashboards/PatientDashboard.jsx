@@ -1,9 +1,10 @@
 import Calender from "../../components/Calender";
 import "react-calendar/dist/Calendar.css";
-import { useContext,  useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import BookModal from "../../components/Bookmodal";
 import AddRecordModal from "../../components/AddRecordModal";
 import { AuthContext } from "../../Contexts/AuthContext";
+import axios from "axios";
 
 export default function PatientDashboard () {
   
@@ -23,6 +24,40 @@ export default function PatientDashboard () {
   const closeBookModal = () => {
     setIsBookModalOpen(!isBookModalOpen);
   };
+   const [data, setData] = useState(null);
+   const [isLoading, setIsLoading] = useState(true);
+   const { token } = useContext(AuthContext);
+
+   useEffect(() => {
+     const fetchData = async () => {
+       try {
+         const response = await axios.get(
+           `${import.meta.env.VITE_BACKEND_API_KEY}/patient/dash/data`,
+           {
+             headers: {
+               Authorization: `Bearer ${token}`,
+             },
+           }
+         );
+         setData(response.data);
+       } catch (error) {
+         console.error("Error fetching dashboard data:", error);
+       } finally {
+         setIsLoading(false);
+       }
+     };
+
+     fetchData();
+   }, [token]);
+
+   if (isLoading) {
+     return <div>Loading...</div>;
+   }
+
+   if (!data) {
+     return <div>No data available</div>;
+   }
+
   return (
     <>
       <div className="flex top justify-between">
@@ -62,10 +97,10 @@ export default function PatientDashboard () {
             </p>
             <h2 className="text-xl font-bold mb-2">Health Stats</h2>
             <p className="font-[500] text-gray-900 dark:text-gray-500 ">
-              My Appointments:12
+              My Appointments:{data.appointments}
             </p>
             <p className="font-[500] text-gray-900 dark:text-gray-500">
-              My Records:12
+              My Records:{data.records}
             </p>
           </div>
           <div className="flex flex-col items-start justify-start p-4 rounded bg-gray-50 h-44 dark:bg-gray-800">
