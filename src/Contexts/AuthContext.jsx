@@ -60,7 +60,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem("role", JSON.stringify(user.role));
         localStorage.setItem("token", JSON.stringify(response.data.token));
         setButtonText("Success");
-        setButtonText("Success");
+        window.location.reload();
       } else {
         setButtonText("Sign in");
       }

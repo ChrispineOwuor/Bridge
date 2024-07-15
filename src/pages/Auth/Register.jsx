@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 
 export default function Register() {
@@ -27,8 +27,9 @@ export default function Register() {
         }
       );
 
-      if (response.status === 202) {
+      if (response.status === 200) {
         setButtonText("Success");
+        window.location.href = "/auth/login";
       } else {
         setButtonText("Sign up");
       }

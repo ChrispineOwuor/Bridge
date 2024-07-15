@@ -77,6 +77,7 @@ export default function Layout() {
         localStorage.removeItem("email");
         localStorage.removeItem("role");
         setLogout(true);
+        window.location.reload();
       }
     } catch (error) {
       alert(error.response.data.message);
