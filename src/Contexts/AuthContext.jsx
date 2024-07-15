@@ -65,7 +65,7 @@ export const AuthProvider = ({ children }) => {
         setButtonText("Sign in");
       }
     } catch (error) {
-      alert(error.response.data.msg);
+      alert(error.response.data.message);
       setButtonText("Sign in");
     } finally {
       setIsSubmitting(false);
