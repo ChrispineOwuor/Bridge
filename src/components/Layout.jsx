@@ -30,8 +30,8 @@ export default function Layout() {
     },
     {
       link: "/app/add/symptom",
-      name: "Alerts",
-      roles: ["doctor",],
+      name: "Add Symptoms",
+      roles: ["doctor"],
     },
     {
       link: "/app/educational-content",
@@ -80,8 +80,7 @@ export default function Layout() {
       }
     } catch (error) {
       alert(error.response.data.message);
-    }    
-
+    }
   };
   return (
     <>
