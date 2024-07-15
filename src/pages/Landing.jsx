@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import mom from "../assets/expec.png"
 
 export default function Landing() {
   return (
@@ -35,7 +36,7 @@ export default function Landing() {
         </div>
       </div>
       <img
-        src="/src/assets/expec.png"
+        src={mom}
         alt="Leafs"
         className="w-full h-1/4 object-cover sm:h-screen  sm:w-4/12"
       />
