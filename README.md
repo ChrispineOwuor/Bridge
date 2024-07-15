@@ -6,21 +6,6 @@ The BridgeHealth System is a comprehensive web application designed to streamlin
 
 ## Setting Up the Project for Development
 
-To set up the BridgeHealth System for development, follow these steps:
-
-1. Install Node.js and npm (Node Package Manager) on your local machine. You can download and install Node.js from the official website: <https://nodejs.org/>
-
-2. Create a new directory for your project and navigate to it in your terminal or command prompt.
-
-3. Run the following command to initialize a new Node.js project:
-
-   ``` bash
-   npm init
-
-   ```
-
-## Setting Up the Project for Development
-
    To set up the BridgeHealth System for development, follow these steps:
 
    1. Install Node.js and npm (Node Package Manager) on your local machine. You can download and install Node.js from the official website: <https://nodejs.org/>
@@ -72,8 +57,4 @@ The BridgeHealth System includes a medical services system to help healthcare pr
 
 The BridgeHealth System implements robust security measures to protect patient data and ensure data integrity. The system uses encryption, secure communication protocols, and access control mechanisms to protect sensitive information. Additionally, the system includes features such as data backup and recovery, as well as regular security audits and updates.
 
-## API Documentation
 
-The BridgeHealth System provides a comprehensive API documentation to help developers and integrators integrate the system with their own applications or systems. The API documentation includes detailed information about the available endpoints, request methods, request parameters, response formats, and error handling.
-
-Please note that this documentation is a high-level overview of the BridgeHealth System. For a more detailed and technical documentation, you may need to refer to the source code, system architecture, and specific implementation details.
